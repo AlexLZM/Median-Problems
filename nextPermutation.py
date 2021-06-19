@@ -5,10 +5,10 @@
 # Example:
 # Input: nums = [1,2,3]
 # Output: [1,3,2]
-
+import bisect
 def nextPermutation(nums):
     '''
-    We found the pattern to find the next permutation:
+    We found the pattern to find the next permutation inplace:
     1. from right to left, find the first index 'i' where value is greater than its left
     2. reverse the part nums[i:]
     3. find the next greater value of nums[i - 1] after i (from the right) and exchange the values with nums[i - 1]
@@ -25,5 +25,6 @@ def nextPermutation(nums):
             
             j = bisect.bisect_right(nums, nums[i-1], i) # leftbound is i
             nums[i-1], nums[j] = nums[j], nums[i-1]
+            return
     nums.reverse()
             
