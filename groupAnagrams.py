@@ -17,6 +17,6 @@ def groupAnagrams(strs):
     for word in strs:
         l = [0] * 26
         for c in word:
-            l[ord[c]-o] += 1
+            l[ord(c)-o] += 1
         anas[tuple(l)].append(word)
     return anas.values()
