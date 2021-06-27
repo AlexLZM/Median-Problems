@@ -18,7 +18,7 @@ class Solution:
 
         # n > 3
         # divide s into 3 parts: left, mid, right
-        div = n//3 
+        div = n//4 
         left = s[:div]
         right = s[n-div:]
 
