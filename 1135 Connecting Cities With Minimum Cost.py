@@ -77,3 +77,5 @@ def minimumCost(n, connections):
         return -1
 
     final_weights = [weight for weight in weights if weight > 0]
+    
+    return final_weights[0] if len(final_weights) == 1 else -1
